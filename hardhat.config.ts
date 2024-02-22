@@ -8,6 +8,11 @@ const config: HardhatUserConfig = {
     version: '0.8.23',
   },
   networks: {
+    'sepolia': {
+      url: 'https://eth-sepolia.g.alchemy.com/v2/yjDax07rgzbHDQvj-jK6HIfGIKJbviTY',
+      accounts: [process.env.WALLET_KEY as string],
+      gasPrice: 1000000000,
+    },
     // for mainnet
     'base-mainnet': {
       url: 'https://mainnet.base.org',
